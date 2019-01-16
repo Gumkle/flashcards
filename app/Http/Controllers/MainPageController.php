@@ -8,6 +8,6 @@ class MainPageController extends Controller
 {
     public function welcome()
     {
-        return view('welcome.blade.php');
+        return view('welcome');
     }
 }

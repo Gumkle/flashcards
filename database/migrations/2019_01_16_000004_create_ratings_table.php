@@ -4,17 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateRatingsTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $set_schema_table = 'users';
+    public $set_schema_table = 'ratings';
 
     /**
      * Run the migrations.
-     * @table users
+     * @table ratings
      *
      * @return void
      */
@@ -24,8 +24,16 @@ class CreateUsersTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('email')->unique();
-            $table->text('password');
+            $table->tinyInteger('rate');
+            $table->integer('user_id')->unsigned();
+
+            $table->index(["user_id"], 'fk_ratings_users1_idx');
+
+
+            $table->foreign('user_id', 'fk_ratings_users1_idx')
+                ->references('id')->on('users')
+                ->onDelete('no action')
+                ->onUpdate('no action');
         });
     }
 
