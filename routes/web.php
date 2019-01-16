@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', 'MainPageController@welcome');
+Route::resource('flashcards', 'FlashcardController');
+Route::resource('messages', 'MessageController');
