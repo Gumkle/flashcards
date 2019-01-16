@@ -31,7 +31,7 @@ class CreateAnswerSideTable extends Migration
 
 
             $table->foreign('flashcard_id', 'fk_answer_side_flashcards1_idx')
-                ->references('id')->on('flashcards')
+                ->references('id')->on('respositories')
                 ->onDelete('no action')
                 ->onUpdate('no action');
         });

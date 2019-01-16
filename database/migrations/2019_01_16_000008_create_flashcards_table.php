@@ -10,11 +10,11 @@ class CreateFlashcardsTable extends Migration
      * Schema table name to migrate
      * @var string
      */
-    public $set_schema_table = 'flashcards';
+    public $set_schema_table = 'respositories';
 
     /**
      * Run the migrations.
-     * @table flashcards
+     * @table respositories
      *
      * @return void
      */

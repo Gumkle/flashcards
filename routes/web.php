@@ -13,5 +13,5 @@
 
 
 Route::get('/', 'MainPageController@welcome');
-Route::resource('flashcards', 'FlashcardController');
+Route::resource('repositories', 'RepositoryController');
 Route::resource('messages', 'MessageController');
