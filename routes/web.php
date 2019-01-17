@@ -15,3 +15,10 @@
 Route::get('/', 'MainPageController@welcome');
 Route::resource('repositories', 'RepositoryController');
 Route::resource('messages', 'MessageController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

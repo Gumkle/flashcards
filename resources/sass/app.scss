@@ -8,6 +8,12 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// Carousel
+@import 'templates/cover';
+
+// Elements
+@import 'elements/background_image';
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);

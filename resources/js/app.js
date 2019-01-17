@@ -6,7 +6,7 @@
  */
 
 require('./bootstrap');
-
+require('../../node_modules/jquery/dist/jquery.min');
 window.Vue = require('vue');
 
 /**
