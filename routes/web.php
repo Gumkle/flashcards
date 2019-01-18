@@ -11,14 +11,14 @@
 |
 */
 
+Route::middleware('guest')->group(function () {
+    Route::get('/', 'MainPageController@welcome')->name('welcome');
+});
 
-Route::get('/', 'MainPageController@welcome');
+Route::middleware('verified')->group(function () {
+    Route::resource('messages', 'MessageController');
+    Route::resource('users', 'UserController');
+});
+
 Route::resource('repositories', 'RepositoryController');
-Route::resource('messages', 'MessageController');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes(['verify' => true]);

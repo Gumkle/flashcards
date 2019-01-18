@@ -25,6 +25,7 @@ class CreateStarredReposTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('user_id')->unsigned();
             $table->integer('repository_id')->unsigned();
+            $table->timestamps();
 
             $table->index(["user_id"], 'fk_users_has_repositories_users1_idx');
 

@@ -27,6 +27,7 @@ class CreateRepositoriesTable extends Migration
             $table->text('name');
             $table->text('description');
             $table->integer('user_id')->unsigned();
+            $table->timestamps();
 
             $table->index(["user_id"], 'fk_repositories_users_idx');
 

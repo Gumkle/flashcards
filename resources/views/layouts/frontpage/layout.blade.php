@@ -6,7 +6,7 @@
 
     <title>{{env('APP_NAME')}}</title>
 
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/app.css">
 </head>
 
 <body class="text-center front-page">
@@ -19,6 +19,6 @@
         @component('layouts.frontpage.elements.footer')@endcomponent
     </div>
 </div>
-<script src="js/app.js"></script>
+<script src="{{env('APP_URL')}}js/app.js"></script>
 </body>
 </html>

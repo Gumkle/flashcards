@@ -28,6 +28,7 @@ class CreateFilesTable extends Migration
             $table->text('path');
             $table->text('filelink');
             $table->integer('file_type_id')->unsigned();
+            $table->timestamps();
 
             $table->index(["file_type_id"], 'fk_files_file_types1_idx');
 

@@ -18,7 +18,9 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect('/home');
+            if(Auth::user()->email_verified_at)
+                return redirect(route('users.show', Auth::id()));
+            return redirect(route('repositories.index'));
         }
 
         return $next($request);

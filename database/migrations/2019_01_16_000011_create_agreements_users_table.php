@@ -25,6 +25,7 @@ class CreateAgreementsUsersTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('agreement_id')->unsigned();
             $table->integer('user_id')->unsigned();
+            $table->timestamps();
 
             $table->index(["user_id"], 'fk_agreements_has_users_users1_idx');
 

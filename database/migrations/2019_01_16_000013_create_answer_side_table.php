@@ -26,6 +26,7 @@ class CreateAnswerSideTable extends Migration
             $table->increments('id');
             $table->mediumText('content');
             $table->integer('flashcard_id')->unsigned();
+            $table->timestamps();
 
             $table->index(["flashcard_id"], 'fk_answer_side_flashcards1_idx');
 

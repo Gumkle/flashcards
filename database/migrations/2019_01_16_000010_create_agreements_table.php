@@ -27,6 +27,7 @@ class CreateAgreementsTable extends Migration
             $table->text('name');
             $table->mediumText('copy');
             $table->integer('file_id')->unsigned();
+            $table->timestamps();
 
             $table->index(["file_id"], 'fk_agreements_files1_idx');
 

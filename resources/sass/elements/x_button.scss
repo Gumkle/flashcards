@@ -1,0 +1,19 @@
+.x-button {
+  display: flex;
+  border: 1px solid black;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: $danger;
+  color: white !important;
+  font-weight: bold;
+  text-align: center;
+
+  &:hover{
+    text-decoration: none;
+  }
+
+}

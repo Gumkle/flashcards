@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class RepositoryController extends Controller
 {
-
+    public function index()
+    {
+        
+    }
 }

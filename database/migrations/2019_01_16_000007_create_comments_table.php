@@ -28,6 +28,7 @@ class CreateCommentsTable extends Migration
             $table->text('content');
             $table->integer('user_id')->unsigned();
             $table->integer('parent_id')->unsigned();
+            $table->timestamps();
 
             $table->index(["parent_id"], 'fk_comments_comments1_idx');
 

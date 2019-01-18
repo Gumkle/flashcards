@@ -26,6 +26,7 @@ class CreateRatingsTable extends Migration
             $table->increments('id');
             $table->tinyInteger('rate');
             $table->integer('user_id')->unsigned();
+            $table->timestamps();
 
             $table->index(["user_id"], 'fk_ratings_users1_idx');
 

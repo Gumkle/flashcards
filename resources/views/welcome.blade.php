@@ -14,7 +14,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <a href="#" class="text-dark small">{{__('Or start without account!')}}</a>
+                <a href="{{route('repositories.index')}}" class="text-dark small">{{__('Or start without account!')}}</a>
             </div>
         </div>
         </p>

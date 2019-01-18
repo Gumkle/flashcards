@@ -26,6 +26,7 @@ class CreateMessagesTable extends Migration
             $table->increments('sender_id')->unsigned();
             $table->integer('receiver_id')->unsigned();
             $table->mediumText('content');
+            $table->timestamps();
 
             $table->index(["sender_id"], 'fk_users_has_users_users1_idx');
 

@@ -25,6 +25,7 @@ class CreateFlashcardsTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('repository_id')->unsigned();
+            $table->timestamps();
 
             $table->index(["repository_id"], 'fk_flashcards_repositories1_idx');
 

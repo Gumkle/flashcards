@@ -1,11 +1,20 @@
-@extends('layouts.app')
+@extends('layouts.frontpage.layout')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+        <div class="col-md-12">
+            <div class="card bg-light">
+                <div class="card-header d-flex">
+                    <div class="mr-auto">
+                        {{ __('Reset Password') }}
+                    </div>
+                    <div class="ml-auto">
+                        <a href="{{route('welcome')}}" class="x-button">
+                            X
+                        </a>
+                    </div>
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
