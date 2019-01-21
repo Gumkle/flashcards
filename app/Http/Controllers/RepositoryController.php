@@ -8,6 +8,7 @@ class RepositoryController extends Controller
 {
     public function index()
     {
-        
+
+        return view('resources.repositories.index');
     }
 }

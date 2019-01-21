@@ -6,7 +6,7 @@
 
     <title>{{env('APP_NAME')}}</title>
 
-    <link rel="stylesheet" href="{{env('APP_URL')}}/css/app.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/cover.css">
 </head>
 
 <body class="text-center front-page">
