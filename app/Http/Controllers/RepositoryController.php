@@ -8,7 +8,36 @@ class RepositoryController extends Controller
 {
     public function index()
     {
-
         return view('resources.repositories.index');
+    }
+
+    public function show()
+    {
+        
+    }
+
+    public function create()
+    {
+        return view('resources.repositories.add');
+    }
+
+    public function store()
+    {
+        
+    }
+
+    public function edit()
+    {
+        
+    }
+
+    public function update()
+    {
+        
+    }
+
+    public function destroy()
+    {
+        
     }
 }
