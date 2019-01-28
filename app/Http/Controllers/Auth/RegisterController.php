@@ -69,7 +69,7 @@ class RegisterController extends Controller
         ]);
 
         if(Auth::id()){
-            $this->redirectTo = route('users.show', Auth::id());
+            $this->redirectTo = route('repositories.index');
         }
 
         return $newUser;
